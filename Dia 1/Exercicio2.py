@@ -1,14 +1,16 @@
 # Criando função de calcular a média.
 
-def calcula_media(a, b, c, d, e):
-    return (a + b + c + d + e) /5
+def calcula_media(x):
+    return soma_notas /5
 
-n1 = float(input("Digite a primeira nota: "))
-n2 = float(input("Digite a segunda nota: "))
-n3 = float(input("Digite a terceira nota: "))
-n4 = float(input("Digite a quarta nota: "))
-n5 = float(input("Digite a quinta nota: "))
+soma_notas = 0
 
-media = calcula_media(n1,n2,n3,n4,n5) 
+# Criando um loop For para o input das notas
+
+for i in range(1, 6):
+    notas = float(input("Digite sua nota %d: " % i))
+    soma_notas += notas
+
+media = calcula_media(notas) 
 
 print("Sua média é:", media)
